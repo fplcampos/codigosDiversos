@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Template Ambev</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/geral.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+   		<h1>Relatório AMBEV</h1>
+		<form action="dados.php" method="post">
+			<fieldset>
+				<legend>NOSSO TRABALHO:</legend>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="dataInicial">Data Inicial</label>
+							<input type="date" class="form-control input-sm" name="dataInicial" id="dataInicial" required>
+						</div>
+						<div class="col-sm-6">
+							<label for="dataFinal">Data Final</label>
+							<input type="date" class="form-control input-sm" name="dataFinal" id="dataFinal" required>
+						</div>
+					</div>
+				</div>
+					
+				
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="nPublicacoes">Número de Publicações</label>
+							<input type="number" class="form-control input-sm" name="nPublicacoes" id="nPublicacoes" placeholder="Exemplo: 20" required>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-3">
+							<label for="ingredientesNaturais">Ingredientes Naturais (em %)</label>
+							<input type="number" class="form-control input-sm" name="ingredientesNaturais" id="ingredientesNaturais" placeholder="20%">
+						</div>
+						<div class="col-sm-3">
+							<label for="vaiBemComida">Vai Bem com Comida (em %)</label>
+							<input type="number" class="form-control input-sm" name="vaiBemComida" id="vaiBemComida" placeholder="20%">
+						</div>
+						<div class="col-sm-3">
+							<label for="estiloVidaBalanceado">Estilo de Vida Balanceado (em %)</label>
+							<input type="number" class="form-control input-sm" name="estiloVidaBalanceado" id="estiloVidaBalanceado" placeholder="20%">
+						</div>
+						<div class="col-sm-3">
+							<label for="homensMulheres">É Para Homens e Mulheres (em %)</label>
+							<input type="number" class="form-control input-sm" name="ehParaHomensMulheres" id="homensMulheres" placeholder="20%">
+						</div>
+						<div class="col-sm-12">
+							<p class="bg-danger rounded margin-10 text-danger text-center">Caso algum dos itens acima não tenha percentual, deixar o campo em branco.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="esforcoFSB">N° referente ao esforço FSB:</label>
+							<input type="number" class="form-control input-sm" name="esforcoFSB" id="esforcoFSB" placeholder="9999" required>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="urlImagem1">URL Imagem Destaque 1:</label>
+							<div class="input-group">
+								<span class="input-group-addon" id="addon1">URL</span>
+								<input type="text" class="form-control input-sm" name="urlImagem1" id="urlImagem1" placeholder="Somente URL" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<label for="urlImagem2">URL Imagem Destaque 2:</label>
+							<div class="input-group">
+								<span class="input-group-addon" id="addon1">URL</span>
+								<input type="text" class="form-control input-sm" name="urlImagem2" id="urlImagem2" placeholder="Somente URL" required>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<p class="bg-danger rounded margin-10 text-danger text-center">Medida das imagens: 231px (L) x 133px (A).</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="titMateria1">Título Destaque 1:</label>
+							<input type="text" class="form-control input-sm" name="titMateria1" id="titMateria1" placeholder="Nome do Veículo/Matéria" required>
+						</div>
+						<div class="col-sm-6">
+							<label for="titMateria2">Título Destaque 2:</label>
+							<input type="text" class="form-control input-sm" name="titMateria2" id="titMateria2" placeholder="Nome do Veículo/Matéria" required>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="txtMateria1">Texto Destaque 1:</label>
+							<textarea class="form-control" rows="5" name="txtMateria1" id="txtMateria1" required></textarea>
+						</div>
+						<div class="col-sm-6">
+							<label for="txtMateria2">Texto Destaque 2:</label>
+							<textarea class="form-control" rows="5" name="txtMateria2" id="txtMateria2" required></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="urlMateria1">URL Matéria Destaque 1:</label>
+							<div class="input-group">
+								<span class="input-group-addon" id="addon1">URL</span>
+								<input type="text" class="form-control input-sm" name="urlMateria1" id="urlMateria1" placeholder="Somente URL" required>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<label for="urlMateria2">URL Matéria Destaque 2:</label>
+							<div class="input-group">
+								<span class="input-group-addon" id="addon1">URL</span>
+								<input type="text" class="form-control input-sm" name="urlMateria2" id="urlMateria2" placeholder="Somente URL" required>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="veiculoMateria1">Veículo:</label>
+							<input type="text" class="form-control input-sm" name="veiculoMateria1" id="veiculoMateria1" placeholder="Veículo da matéria" required>
+						</div>
+						<div class="col-sm-4">
+							<label for="tituloMateria1">Título matéria</label>
+							<input type="text" class="form-control input-sm" name="tituloMateria1" id="tituloMateria1" placeholder="Título da matéria" required>
+						</div>
+						<div class="col-sm-4">
+							<label for="linkMateria1">Link da matéria</label>
+							<input type="text" class="form-control input-sm" name="linkMateria1" id="linkMateria1" placeholder="Link da matéria" required>
+						</div>
+					</div>
+				</div>
+
+				<div class="novosCampos"></div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12 text-right">
+							<button type="button" class="btn btn-default btn-xs addFields" aria-label="Adicionar">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="qtdMaterias">Quantidade Matérias:</label>
+							<input type="number" class="form-control input-sm" name="qtdMaterias" placeholder="Exemplo: 10" required>
+						</div>
+						<div class="col-sm-6">
+							<label for="totalMaterias">Total Matérias:</label>
+							<input type="number" class="form-control input-sm" name="totalMaterias" placeholder="Exemplo: 10" required>
+						</div>
+					</div>
+				</div>
+			</fieldset> <!-- Fim NOSSO TRABALHO -->
+
+			<fieldset>
+				<legend>ATENÇÃO:</legend>
+				<p class="bg-info rounded text-center text-primary">Publicações previstas para esta semana (Este título será inserido automaticamente.)</p>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="tituloPrevSemana1">Título:</label>
+							<input type="text" class="form-control input-sm" name="tituloPrevSemana1" id="tituloPrevSemana1" placeholder="Título da matéria" required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="txtMatPrevSemana1">Texto Matéria:</label>
+							<textarea class="form-control" rows="5" name="txtMatPrevSemana1" id="txtMatPrevSemana1" required></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="areaNovasPub"></div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12 text-right">
+							<button type="button" class="btn btn-default btn-xs addFields2" aria-label="Adicionar">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</fiedlset> <!-- Fim ATENÇÃO -->
+
+			<fieldset>
+				<legend>A CERVEJA:</legend>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="tituloACerva1">Título:</label>
+							<input type="text" class="form-control input-sm" name="tituloACerva1" id="tituloACerva1" placeholder="Título da matéria" required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="txtMatACerva1">Texto Matéria:</label>
+							<textarea class="form-control" rows="5" name="txtMatACerva1" id="txtMatACerva1" required></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="areaACerva"></div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12 text-right">
+							<button type="button" class="btn btn-default btn-xs addFields3" aria-label="Adicionar">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</fiedlset> <!-- Fim A CERVEJA -->
+
+			<fieldset>
+				<legend>AMBEV/MARCAS:</legend>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="tituloMarcas1">Título:</label>
+							<input type="text" class="form-control input-sm" name="tituloMarcas1" id="tituloMarcas1" placeholder="Título da matéria" required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12">
+							<label for="txtMatMarcas1">Texto Matéria:</label>
+							<textarea class="form-control" rows="5" name="txtMatMarcas1" id="txtMatMarcas1" required></textarea>
+						</div>
+					</div>
+				</div>
+
+				<div class="areaMarcas"></div>
+
+				<div class="form-group form-group-sm">
+					<div class="row">
+						<div class="col-sm-12 text-right">
+							<button type="button" class="btn btn-default btn-xs addFields4" aria-label="Adicionar">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</fiedlset> <!-- Fim A CERVEJA -->
+				
+			<div class="form-group form-group-sm">
+				<div class="row">
+					<div class="col-sm-12">
+						<button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+					</div>
+				</div>
+			</div>
+		</form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/js.js"></script>
+  </body>
+</html>

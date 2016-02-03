@@ -1,0 +1,11 @@
+.rounded {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	border-radius:5px;
+	padding:5px;
+}
+
+.margin-10 {
+	margin-top:10px;
+}
